@@ -13,12 +13,19 @@ main{
 }
 body{
 background-color: #FBF8F1;
+overflow: hidden;
 }
 .Imagesbox{
-    width: 50%;
+    width: 30%;
+    height: 30%;
+    display: block;
+}
+.Loginbox{
+    width: 70%;
 }
 .Imagesbox{
-    width: 60%;
+    width: 30%;
+    height: 30%;
 }
 .ModelImage{
     height: 100vh;
@@ -42,7 +49,12 @@ text-align: center;
 
 color: #000000;
 }
+.Form_Box{
+    width: 310px;
+    margin: 0 auto;
+}
 .Form_Box_p{
+    text-align: left;
     font-family: 'Fell';
     font-style: normal;
 font-weight: 400;
@@ -50,4 +62,34 @@ font-size: 16px;
 line-height: 20px;
 
 color: #000000;
+}
+.Form_Box_input{
+    padding: 5px;
+    margin-bottom: 25px;
+    width: 307.5px;
+    border-bottom: 1px solid #000000 ;
+}
+.button{
+display: block;
+    font-family: 'Fell';
+    width: 309px;
+    margin: 0 auto;
+height: 34px;
+    color: white;
+background: #000000;
+border: 1px solid #000000;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+}
+.Nextlink{
+    font-family: 'Fell';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #000000;
+
 }

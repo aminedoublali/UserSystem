@@ -30,3 +30,28 @@ li{
     list-style: none;
     list-style-type: none;
 }
+input {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+/* Chrome, Safari, Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* IE, Edge */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;  /* Firefox */
+}
