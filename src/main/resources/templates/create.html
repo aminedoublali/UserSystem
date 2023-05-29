@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Hello</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<h1 th:text="${title}"></h1>
+	<form method="get" action="#" th:action="@{/create/complete}" th:object="${createForm}">
+		<p>名前：<input type="text" name="name" th:value="*{name}"></p>
+		<p>メールアドレス：<input type="text" name="email" th:value="*{email}"></p>
+		<p>パスワード：<input type="password" name="password" th:value="*{password}"></p>
+		<p>住所：<input type="text" name="address" th:value="*{address}"></p>
+		<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">エラーメッセージ</div>
+		<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">エラーメッセージ</div>
+		<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">エラーメッセージ</div>
+		<div th:if="${#fields.hasErrors('address')}" th:errors="*{address}">エラーメッセージ</div>
+		<input type="submit" value="送信">
+	</form>
+</body>
+
+</html>
