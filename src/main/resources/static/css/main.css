@@ -24,19 +24,30 @@ background-color: #FBF8F1;
     height: 100vh;
 }
 .Form{
-    width: 572px;
-height: 446px;
+    width: 500px;
+height: 400px;
 margin: 0 auto;
 background-color: #fff;
 }
 .Form_Text{
-    font-family: 'IM FELL English';
+    font-family: 'Fell';
+    padding: 50px 0;
 font-style: normal;
 font-weight: 400;
 font-size: 36px;
 line-height: 46px;
+text-align: center;
 /* ボックスの高さと同一 */
 
+
+color: #000000;
+}
+.Form_Box_p{
+    font-family: 'Fell';
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
 
 color: #000000;
 }
