@@ -5,27 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Site</title>
-	<link rel="stylesheet" th:href="@{css/main.css}">
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Site</title>
-	<link rel="stylesheet" th:href="@{css/main.css}">
+	<link rel="stylesheet" th:href="@{css\main.css}">
 </head>
 <body>
 	<main class="MainPrimary">
 		<div class="Imagesbox">
-			<picture class="ModelImage">
-				<source type="image/webp" th:src="@{image/Model.webp}" srcset="images\Model.webp">
-				<img src="src\main\resources\static\images\Model.jpg" th:src="@{image/Model.webp}" alt="女性モデル">
-			  </picture>
-			  
+			<img class="ModelImage" th:src="@{images/Model.jpg}" alt="">
 		</div>
-		<section></section>
+		<section class="Loginbox"></section>
 	</main>
 	<a th:href="@{/create}"></a>
 	
