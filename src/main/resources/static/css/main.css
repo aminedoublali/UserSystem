@@ -6,12 +6,12 @@
 .Imagesbox{
     width: 30px;
 }
-main{
+.MainPrimary{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-body{
+.BodyPrimary{
 background-color: #FBF8F1;
 overflow: hidden;
 }
