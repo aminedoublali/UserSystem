@@ -34,9 +34,7 @@ public class AccountService {
     	
     	if (account == null) {
             model.addAttribute("emailerrormessage", "メールアドレスが見つかりませんでした");
-        }
-
-        if (!account.getPassword().equals(password)) {
+        } else if (!account.getPassword().equals(password)) {
         	model.addAttribute("passworderrormessage", "パスワードが間違っています");
         }
         
