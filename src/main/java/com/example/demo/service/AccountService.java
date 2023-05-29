@@ -30,19 +30,25 @@ public class AccountService {
         return account;
     }
     
-    public void logincheck(Account account, String password, Model model) {
+    public boolean logincheck(Account account, String password, Model model) {
+    	
+    	boolean iserror = true;
     	
     	if (account == null) {
             model.addAttribute("emailerrormessage", "メールアドレスが見つかりませんでした");
-            return;
+            iserror = false;
+            return iserror;
         }
     	
     	if (!account.getPassword().equals(password)) {
         	model.addAttribute("passworderrormessage", "パスワードが間違っています");
         }
     	
+    	return iserror;
+    	
     }
     
+    //修正予定
     public void registerAccount(String name, String email, String password, String address) {
     	
         if (accountdao.findByEmail(email) != null) {
@@ -50,6 +56,7 @@ public class AccountService {
         }
 
         Account account = new Account();
+        
         account.setName(name);
         account.setEmail(email);
         account.setPassword(password);
