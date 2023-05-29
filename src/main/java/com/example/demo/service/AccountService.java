@@ -30,16 +30,32 @@ public class AccountService {
         return account;
     }
     
-    public Model logincheck(Account account, String password, Model model) {
+    public void logincheck(Account account, String password, Model model) {
     	
     	if (account == null) {
             model.addAttribute("emailerrormessage", "メールアドレスが見つかりませんでした");
-        } else if (!account.getPassword().equals(password)) {
+            return;
+        }
+    	
+    	if (!account.getPassword().equals(password)) {
         	model.addAttribute("passworderrormessage", "パスワードが間違っています");
         }
-        
-        return model;
     	
+    }
+    
+    public void registerAccount(String name, String email, String password, String address) {
+    	
+        if (accountdao.findByEmail(email) != null) {
+            throw new IllegalArgumentException("同じEmailが既に存在します");
+        }
+
+        Account account = new Account();
+        account.setName(name);
+        account.setEmail(email);
+        account.setPassword(password);
+        account.setDeleted(false);
+        
+        accountdao.save(account);
     }
     
 }
