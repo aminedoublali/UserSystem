@@ -6,6 +6,37 @@
 .Imagesbox{
     width: 30px;
 }
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+background-color: #FBF8F1;
+}
+.Imagesbox{
+    width: 50%;
+}
+.Imagesbox{
+    width: 60%;
+}
 .ModelImage{
-    width: 30%;
+    height: 100vh;
+}
+.Form{
+    width: 572px;
+height: 446px;
+margin: 0 auto;
+background-color: #fff;
+}
+.Form_Text{
+    font-family: 'IM FELL English';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 46px;
+/* ボックスの高さと同一 */
+
+
+color: #000000;
 }
