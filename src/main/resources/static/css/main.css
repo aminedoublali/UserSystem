@@ -16,12 +16,16 @@ background-color: #FBF8F1;
 overflow: hidden;
 }
 .Imagesbox{
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
+    display: block;
+}
+.Loginbox{
+    width: 70%;
 }
 .Imagesbox{
-    width: 60%;
-    height: 60%;
+    width: 30%;
+    height: 30%;
 }
 .ModelImage{
     height: 100vh;
@@ -78,4 +82,14 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 20px;
+}
+.Nextlink{
+    font-family: 'Fell';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #000000;
+
 }
