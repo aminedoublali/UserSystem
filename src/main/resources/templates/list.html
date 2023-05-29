@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Site</title>
+	<link rel="stylesheet" th:href="@{css/main.css}">
+</head>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>名前</th>
+		<th>メール</th>
+		<th>パスワード</th>
+		<th>住所</th>
+		<th>削除フラグ</th>
+	</tr>
+	<tr th:each="res : ${acList}">
+		<td th:text="${res.id}">ID</td>
+		<td th:text="${res.name}">名前</td>
+		<td th:text="${res.mail}">メール</td>
+		<td th:text="${res.address}">住所</td>
+		<td th:text="${res.deleted}">削除フラグ</td>
+	</tr>
+</table>
+
+</body>
+
+</html>
