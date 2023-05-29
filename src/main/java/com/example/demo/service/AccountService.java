@@ -32,16 +32,17 @@ public class AccountService {
     
     public boolean logincheck(Account account, String password, Model model) {
     	
-    	boolean iserror = true;
+    	boolean iserror = false;
     	
     	if (account == null) {
             model.addAttribute("emailerrormessage", "メールアドレスが見つかりませんでした");
-            iserror = false;
+            iserror = true;
             return iserror;
         }
     	
     	if (!account.getPassword().equals(password)) {
         	model.addAttribute("passworderrormessage", "パスワードが間違っています");
+        	iserror = true;
         }
     	
     	return iserror;
