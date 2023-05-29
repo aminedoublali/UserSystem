@@ -26,5 +26,17 @@ background-color: #FBF8F1;
 .Form{
     width: 572px;
 height: 446px;
+margin: 0 auto;
 background-color: #fff;
+}
+.Form_Text{
+    font-family: 'IM FELL English';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 46px;
+/* ボックスの高さと同一 */
+
+
+color: #000000;
 }
