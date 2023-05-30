@@ -1,4 +1,6 @@
-package com.example.demo.controller;
+//WebControllerへ統合
+
+/*package com.example.demo.controller;
 
 import java.util.List;
 
@@ -6,16 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 
 import com.example.demo.Entity.Account;
+import com.example.demo.dao.AccountDao;
 import com.example.demo.service.AccountService;
 
 public class list {
-	/*	private final AccountDao accountDao;
-	
-		@Autowired
-		list(AccountDao accountdao) {
-			this.accountDao = accountdao;
-		}
-	*/
+//	private final AccountDao accountDao;
+//	
+//	@Autowired
+//	list(AccountDao accountdao) {
+//		this.accountDao = accountdao;
+//	}
 	
 	private final AccountService accountService;
 	
@@ -30,3 +32,4 @@ public class list {
 		return "list";
 	}
 }
+*/

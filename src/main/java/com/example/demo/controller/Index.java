@@ -1,4 +1,6 @@
-package com.example.demo.controller;
+//WebControllerへ統合
+
+/*package com.example.demo.controller;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,3 +16,4 @@ public class Index {
 		return "create";
 	}
 }
+*/
