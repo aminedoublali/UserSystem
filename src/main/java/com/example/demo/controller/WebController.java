@@ -31,6 +31,12 @@ public class WebController {
 	public String list(Model model, Account account) {
 		List<Account> list = accountService.getAllAccounts();
 		model.addAttribute("acList", list);
+		/*		List<Account> alliveList = accountService.getAllAccounts();
+				for(Account Alive : list) {
+					if(Alive.isDeleted()) {
+						
+					}
+				}*/
 		return "list";
 	}
 	
