@@ -11,6 +11,7 @@ import com.example.demo.Entity.Account;
 import com.example.demo.service.AccountService;
 
 @Controller
+@RequestMapping("/")
 public class WebController {
 
 	private final AccountService accountService;
@@ -20,12 +21,11 @@ public class WebController {
 		this.accountService = accountService;
 	}
 
-	@RequestMapping("/")
 	public String index(Model model) {
 		return "index";
 	}
 
-	@RequestMapping("/list")
+	@RequestMapping("list")
 	public String list(Model model, Account account) {
 		List<Account> list = accountService.getAllAccounts();
 		model.addAttribute("acList", list);
