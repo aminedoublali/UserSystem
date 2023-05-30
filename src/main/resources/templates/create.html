@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Site</title>
-	<link rel="stylesheet" th:href="@{css\main.css}">
-	<link rel="stylesheet" th:href="@{css/font.css}">
-	<link rel="stylesheet" th:href="@{css\reset.css}">
-	<link rel="stylesheet" th:href="@{css/valiables.css}">
+	<link rel="stylesheet" th:href="@{/css\main.css}">
+	<link rel="stylesheet" th:href="@{/css/font.css}">
+	<link rel="stylesheet" th:href="@{/css\reset.css}">
+	<link rel="stylesheet" th:href="@{/css/valiables.css}">
 	<meta charset="utf-8" />
 </head>
 
@@ -16,16 +17,18 @@
 
 	<main class="MainPrimary">
 		<div class="Imagesbox">
-			<img class="ModelImage" th:src="@{images/Model.jpg}" alt="">
+			<img class="ModelImage" th:src="@{/images/Model.jpg}" alt="">
 		</div>
 		<div class="Loginbox">
-			<form class="Form"method="get" action="#" th:action="@{/create/complete}" th:object="${createForm}">
+			<form class="Form" method="get" action="#" th:action="@{/create/complete}" th:object="${createForm}">
 				<h1 class="Form_Text">Login Your Account</h1>
 				<div class="Form_Box">
-					<input  class="Form_Box_input" placeholder="Name" type="text" name="name" th:value="*{name}">
-					<input  class="Form_Box_input" placeholder="Email" type="text" name="email" th:value="*{email}">
-					<input  class="Form_Box_input" placeholder="Password" type="password" name="password" th:value="*{password}">
-					<input  class="Form_Box_input" placeholder="address" type="text" name="address" th:value="*{address}">
+					<input class="Form_Box_input" placeholder="Name" type="text" name="name" th:value="*{name}">
+					<input class="Form_Box_input" placeholder="Email" type="text" name="email" th:value="*{email}">
+					<input class="Form_Box_input" placeholder="Password" type="password" name="password"
+						th:value="*{password}">
+					<input class="Form_Box_input" placeholder="address" type="text" name="address"
+						th:value="*{address}">
 					<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">エラーメッセージ</div>
 					<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">エラーメッセージ</div>
 					<div th:if="${findemail}" th:text="${findemail}"></div>
@@ -33,9 +36,10 @@
 					<div th:if="${#fields.hasErrors('address')}" th:errors="*{address}">エラーメッセージ</div>
 				</div>
 				<input class="button" type="submit" value="Create">
-				<p class="Nextlink">you already have account?<a class="Accountmake"th:href="@{/login}">Login Account</a></p>
-			</div>
-			</form>
+				<p class="Nextlink">you already have account?<a class="Accountmake" th:href="@{/login}">Login
+						Account</a></p>
+		</div>
+		</form>
 		</div>
 	</main>
 </body>
