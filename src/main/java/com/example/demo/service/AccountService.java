@@ -1,8 +1,10 @@
 package com.example.demo.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
@@ -13,6 +15,7 @@ import com.example.demo.dao.AccountDao;
 public class AccountService {
 
 	private final AccountDao accountdao;
+	static int page = 1;
 
 	@Autowired
 	public AccountService(AccountDao accountdao) {
@@ -20,7 +23,7 @@ public class AccountService {
 	}
 
 	public List<Account> getAllAccounts() {
-		return accountdao.findAll();
+		return accountdao.findAll(Sort.by(Sort.Direction.ASC, "id"));
 	}
 
 	public Account login(String email) {
@@ -30,12 +33,18 @@ public class AccountService {
 		return account;
 	}
 
-	public boolean logincheck(Account account, String password, Model model) {
+	public Boolean logincheck(Account account, String password, Model model) {
 
 		boolean iserror = false;
 
 		if (account == null) {
 			model.addAttribute("emailerrormessage", "メールアドレスが見つかりませんでした");
+			iserror = true;
+			return iserror;
+		}
+		
+		if (account.isDeleted()) {
+			model.addAttribute("emailerrormessage", "メールアドレスが削除されています");
 			iserror = true;
 			return iserror;
 		}
@@ -63,7 +72,7 @@ public class AccountService {
 				account.setDeleted(false);
 
 				accountdao.save(account);
-				
+
 				return false;
 
 			} else {
@@ -92,6 +101,23 @@ public class AccountService {
 		Account account = accountdao.findByEmail(email);
 		account.setDeleted(true);
 		accountdao.save(account);
+	}
+
+	public List<Account> sortAscending(List<Account> accounts) {
+		Collections.reverse(accounts);
+		return accounts;
+	}
+	
+//	public List<Account> paging(List<>) {
+//		
+//	}
+
+	public static int getPage() {
+		return page;
+	}
+
+	public static void setPage(int page) {
+		AccountService.page = page;
 	}
 
 }
