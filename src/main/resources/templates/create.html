@@ -7,6 +7,35 @@
 </head>
 
 <body>
+
+	<main class="MainPrimary">
+		<div class="Imagesbox">
+			<img class="ModelImage" th:src="@{images/Model.jpg}" alt="">
+		</div>
+		<div class="Loginbox">
+			<form class="Form"  action="#" method="post" th:action="@{/mypage}" th:object="${loginForm}">
+				<h1 class="Form_Text">Login Your Account</h1>
+				<div class="Form_Box">
+					<input  class="Form_Box_input" placeholder="Name" type="text" name="name" th:value="*{name}">
+					<input  class="Form_Box_input" placeholder="Email" type="text" name="email" th:value="*{email}">
+					<input  class="Form_Box_input" placeholder="Password" type="password" name="password" th:value="*{password}">
+					<input  class="Form_Box_input" placeholder="address" type="text" name="address" th:value="*{address}">
+				</div>
+				<input class="button" type="submit" value="Create">
+				<p class="Nextlink">you already have account?<a class="Accountmake"th:href="@{/login}">Login Account</a></p>
+			</div>
+			</form>
+		</div>
+	</main>
+
+
+
+
+
+
+
+
+
 	<h1 th:text="${title}"></h1>
 	<form method="get" action="#" th:action="@{/create/complete}" th:object="${createForm}">
 		<p>名前：<input type="text" name="name" th:value="*{name}"></p>
