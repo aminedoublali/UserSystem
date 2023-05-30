@@ -37,7 +37,6 @@ public class Account {
 	private String address;
 
 	@Column(nullable=false)
-	@NotEmpty
 	private boolean deleted;
 	
 	public Account() {}

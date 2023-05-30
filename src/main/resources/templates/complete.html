@@ -8,7 +8,13 @@
 
 <body>
 	<h1 th:text="${title}"></h1>
-	<a href="/create.html" th:href="@{/}"></a>
+	<p th:text="'id: '+${account.id}"></p>
+	<p th:text="'name: '+${account.name}"></p>
+	<p th:text="'email: '+${account.email}"></p>
+	<p th:text="'password: '+${account.password}"></p>
+	<p th:text="'address: '+${account.address}"></p>
+	<p th:text="'deleted: '+${account.deleted}"></p>
+	<a href="/create.html" th:href="@{/}">戻る</a>
 </body>
 
 </html>
