@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.LoginForm;
 import com.example.demo.Entity.Account;
 import com.example.demo.service.AccountService;
 
@@ -22,7 +23,7 @@ public class WebController {
 		this.accountService = accountService;
 	}
 
-	public String index(Model model) {
+	public String index(Model model, LoginForm form) {
 		return "index";
 	}
 
