@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
@@ -17,6 +17,7 @@
 		<th>パスワード</th>
 		<th>住所</th>
 		<th>削除フラグ</th>
+		<th>削除ボタン</th>
 	</tr>
 	<tr th:each="res : ${acList}">
 		<td th:text="${res.id}">ID</td>
@@ -25,6 +26,11 @@
 		<td th:text="${res.password}">パスワード</td>
 		<td th:text="${res.address}">住所</td>
 		<td th:text="${res.deleted}">削除フラグ</td>
+		<td>
+			<form th:action="@{/del/{email}(email=${res.email})}">
+				<input type="submit" value="削除" />
+			</form>
+		</td>
 	</tr>
 </table>
 
