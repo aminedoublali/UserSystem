@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -108,9 +109,29 @@ public class AccountService {
 		return accounts;
 	}
 	
-//	public List<Account> paging(List<>) {
-//		
-//	}
+	public List<Account> paging(List<Account> account) {
+		
+		List<Account> list = new ArrayList<Account>();
+		
+		for(int i = 1 * ((page - 1) * 10) - 1; i < page * 10; i++) {
+			
+			if(i == -1) {
+				i = 0;
+			}
+			
+			try {
+				
+				list.add(account.get(i));
+				
+			} catch(Exception e) {
+				
+				break;
+				
+			}
+		}
+		
+		return list;
+	}
 
 	public static int getPage() {
 		return page;
