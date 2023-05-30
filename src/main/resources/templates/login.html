@@ -29,7 +29,7 @@
 				<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">エラーメッセージ</div>
 				</div>
 				<input class="button" type="submit" value="Login">
-				<p class="Nextlink">you dont have account?<a class="Accountmake" href="">Make Account</a></p>
+				<p class="Nextlink">you dont have account?<a class="Accountmake" th:href="@{/create}">Make Account</a></p>
 			</div>
 			</form>
 		</div>

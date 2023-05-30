@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Hello</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+	<main class="MainPrimary">
+		<div class="Imagesbox">
+			<img class="ModelImage" th:src="@{images/Model.jpg}" alt="">
+		</div>
+		<div class="Loginbox">
+			<form class="Form"  action="#" method="post" th:action="@{/mypage}" th:object="${loginForm}">
+				<h1 class="Form_Text">Login Your Account</h1>
+				<div class="Form_Box">
+					<input  class="Form_Box_input" placeholder="Name" type="text" name="name" th:value="*{name}">
+					<input  class="Form_Box_input" placeholder="Email" type="text" name="email" th:value="*{email}">
+					<input  class="Form_Box_input" placeholder="Password" type="password" name="password" th:value="*{password}">
+					<input  class="Form_Box_input" placeholder="address" type="text" name="address" th:value="*{address}">
+					<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">エラーメッセージ</div>
+					<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">エラーメッセージ</div>
+					<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">エラーメッセージ</div>
+					<div th:if="${#fields.hasErrors('address')}" th:errors="*{address}">エラーメッセージ</div>
+				</div>
+				<input class="button" type="submit" value="Create">
+				<p class="Nextlink">you already have account?<a class="Accountmake"th:href="@{/login}">Login Account</a></p>
+			</div>
+			</form>
+		</div>
+	</main>
+	</form>
+</body>
+
+</html>

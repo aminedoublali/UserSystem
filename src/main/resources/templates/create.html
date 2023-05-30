@@ -15,6 +15,7 @@
 		<p>住所：<input type="text" name="address" th:value="*{address}"></p>
 		<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">エラーメッセージ</div>
 		<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">エラーメッセージ</div>
+		<div th:if="${findemail}" th:text="${findemail}"></div>
 		<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">エラーメッセージ</div>
 		<div th:if="${#fields.hasErrors('address')}" th:errors="*{address}">エラーメッセージ</div>
 		<input type="submit" value="送信">
