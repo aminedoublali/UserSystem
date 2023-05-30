@@ -7,19 +7,31 @@
 </head>
 
 <body>
-	<h1 th:text="${title}"></h1>
-	<form method="get" action="#" th:action="@{/create/complete}" th:object="${createForm}">
-		<p>名前：<input type="text" name="name" th:value="*{name}"></p>
-		<p>メールアドレス：<input type="text" name="email" th:value="*{email}"></p>
-		<p>パスワード：<input type="password" name="password" th:value="*{password}"></p>
-		<p>住所：<input type="text" name="address" th:value="*{address}"></p>
-		<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">エラーメッセージ</div>
-		<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">エラーメッセージ</div>
-		<div th:if="${findemail}" th:text="${findemail}"></div>
-		<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">エラーメッセージ</div>
-		<div th:if="${#fields.hasErrors('address')}" th:errors="*{address}">エラーメッセージ</div>
-		<input type="submit" value="送信">
-	</form>
+
+	<main class="MainPrimary">
+		<div class="Imagesbox">
+			<img class="ModelImage" th:src="@{images/Model.jpg}" alt="">
+		</div>
+		<div class="Loginbox">
+			<form class="Form"method="get" action="#" th:action="@{/create/complete}" th:object="${createForm}">
+				<h1 class="Form_Text">Login Your Account</h1>
+				<div class="Form_Box">
+					<input  class="Form_Box_input" placeholder="Name" type="text" name="name" th:value="*{name}">
+					<input  class="Form_Box_input" placeholder="Email" type="text" name="email" th:value="*{email}">
+					<input  class="Form_Box_input" placeholder="Password" type="password" name="password" th:value="*{password}">
+					<input  class="Form_Box_input" placeholder="address" type="text" name="address" th:value="*{address}">
+					<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">エラーメッセージ</div>
+					<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">エラーメッセージ</div>
+					<div th:if="${findemail}" th:text="${findemail}"></div>
+					<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">エラーメッセージ</div>
+					<div th:if="${#fields.hasErrors('address')}" th:errors="*{address}">エラーメッセージ</div>
+				</div>
+				<input class="button" type="submit" value="Create">
+				<p class="Nextlink">you already have account?<a class="Accountmake"th:href="@{/login}">Login Account</a></p>
+			</div>
+			</form>
+		</div>
+	</main>
 </body>
 
 </html>
