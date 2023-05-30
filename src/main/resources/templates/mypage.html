@@ -5,8 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Site</title>
+	<link rel="stylesheet" th:href="@{/css\main.css}">
+	<link rel="stylesheet" th:href="@{/css/font.css}">
+	<link rel="stylesheet" th:href="@{/css\reset.css}">
+	<link rel="stylesheet" th:href="@{/css/valiables.css}">
 </head>
-<body>
+<body class="BodyPrimary">
 	<h1>MyPage</h1>
 	<p th:text="'id: '+${account.id}"></p>
 	<p th:text="'name: '+${account.name}"></p>
