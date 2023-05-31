@@ -32,7 +32,7 @@ public class AccountService {
 		return accountdao.findAll(Sort.by(Sort.Direction.ASC, "id"));
 	}
 	
-	public List<Account> getAllAccountsDescendingId(List<Account> accounts) {
+	public List<Account> getAllAccountsDescendingId() {
 		return accountdao.findAll(Sort.by(Sort.Direction.DESC, "id"));
 	}
 	
