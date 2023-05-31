@@ -237,3 +237,46 @@ transition: 0.3s ease;
     display: block;
     text-align: center;
 }
+.BodyList{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 10px;
+}
+.H1{
+    text-align: center;
+    margin: 25px 0;
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+}
+select{
+    margin-left: 77px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #f9f9f9;
+}
+
+table input[type="submit"] {
+    width: 100px;
+    color: #fff;
+    background-color: #d61d1d;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}

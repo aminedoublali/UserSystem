@@ -7,10 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Site</title>
 	<link rel="stylesheet" th:href="@{/css/main.css}">
+	<link rel="stylesheet" th:href="@{/css/font.css}">
+	<link rel="stylesheet" th:href="@{/css\reset.css}">
+	<link rel="stylesheet" th:href="@{/css/valiables.css}">
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	<script th:src="@{/js/list.js}"></script>
 </head>
-<body>
+<body class="BodyList">
+	<h1 class="H1">顧客管理</h1>
 <table>
 	<select name="sort" id="sort">
 		<option value="1" th:selected="${sort}==1">ID昇順</option>
