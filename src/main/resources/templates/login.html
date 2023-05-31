@@ -22,11 +22,11 @@
 					<div class="Arr" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">エラーメッセージ</div>
 					<p class="Form_Box_p">Email</p>
 					<input class="Form_Box_input" type="text" name="email">
-					<div th:if="${emailerrormessage}" th:text="${emailerrormessage}"></div>
+					<div class="Arr" th:if="${emailerrormessage}" th:text="${emailerrormessage}"></div>
 					<div class="Arr" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">エラーメッセージ</div>
 					<p class="Form_Box_p">Password</p>
 					<input class="Form_Box_input" type="password" name="password">
-					<div th:if="${passworderrormessage}" th:text="${passworderrormessage}"></div>
+					<div class="Arr" th:if="${passworderrormessage}" th:text="${passworderrormessage}"></div>
 				</div>
 				<input class="button" type="submit" value="Login">
 				<p class="Nextlink">you dont have account?<a class="Accountmake" th:href="@{/create}">Make Account</a></p>
