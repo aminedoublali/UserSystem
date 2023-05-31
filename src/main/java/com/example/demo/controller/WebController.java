@@ -31,6 +31,30 @@ public class WebController {
 	public String list(Model model, Account account) {
 		List<Account> list = accountService.getAllAccounts();
 		model.addAttribute("acList", list);
+		model.addAttribute("sort", 1);
+		return "list";
+	}
+	
+	@RequestMapping("list/{sortId}")
+	public String list(@PathVariable Long sortId,Model model, Account account) {
+		List<Account> list = null;
+		if(sortId == 1) {
+			list = accountService.getAllAccountsAscendingId();
+		}
+		else if(sortId == 2) {
+			list = accountService.getAllAccountsDescendingId();
+		}
+		else if(sortId == 3) {
+			list = accountService.getDeletedFalse();
+		}
+		else if(sortId == 4) {
+			list = accountService.getDeletedTrue();
+		}
+		else {
+			list = accountService.getAllAccounts();
+		}
+		model.addAttribute("acList", list);
+		model.addAttribute("sort", sortId);
 		return "list";
 	}
 	
