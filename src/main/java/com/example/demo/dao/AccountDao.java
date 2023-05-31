@@ -16,4 +16,8 @@ public interface AccountDao extends JpaRepository<Account, Long> {
     
     List<Account> findByAddress(String address);
     
+    List<Account> findByDeletedTrue();
+    
+    List<Account> findByDeletedFalse();
+    
 }

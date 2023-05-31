@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,37 @@ public class AccountService {
 	public AccountService(AccountDao accountdao) {
 		this.accountdao = accountdao;
 	}
-
+	
 	public List<Account> getAllAccounts() {
+		return accountdao.findAll();
+	}
+
+	public List<Account> getAllAccountsAscendingId() {
 		return accountdao.findAll(Sort.by(Sort.Direction.ASC, "id"));
+	}
+	
+	public List<Account> getAllAccountsDescendingId(List<Account> accounts) {
+		return accountdao.findAll(Sort.by(Sort.Direction.DESC, "id"));
+	}
+	
+	public List<Account> getDeletedTrue() {
+		return accountdao.findByDeletedTrue();
+	}
+	
+	public List<Account> getDeletedFalse() {
+		return accountdao.findByDeletedFalse();
+	}
+	
+	public List<Account> sortAscending(List<Account> accounts) {
+		Comparator<Account> comparator = Comparator.comparingInt(Account::getId);
+		Collections.sort(accounts, comparator);
+		return accounts;
+	}
+	
+	public List<Account> sortDescending(List<Account> accounts) {
+		List<Account> accountsdesc = sortAscending(accounts);
+		Collections.reverse(accountsdesc);
+		return accountsdesc;
 	}
 
 	public Account login(String email) {
@@ -102,11 +131,6 @@ public class AccountService {
 		Account account = accountdao.findByEmail(email);
 		account.setDeleted(true);
 		accountdao.save(account);
-	}
-
-	public List<Account> sortAscending(List<Account> accounts) {
-		Collections.reverse(accounts);
-		return accounts;
 	}
 	
 	public List<Account> paging(List<Account> account) {
