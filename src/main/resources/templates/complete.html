@@ -16,23 +16,16 @@
 			<img class="ModelImage" th:src="@{/images/Model.webp}" alt="">
 		</div>
 		<div class="Loginbox">
-			<div class="Form">
-				<h1>Account completed</h1>
-				<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-
-
-				<lottie-player src="https://lottie.host/9b42099e-3fa8-429d-9985-a303d751b06f/YvhSZq5ozV.json" background="transparent" speed="2" style="width: 150px; height: 150px;" autoplay></lottie-player>
-
-	<p th:text="'id: '+${account.id}"></p>
-	<p th:text="'name: '+${account.name}"></p>
-	<p th:text="'email: '+${account.email}"></p>
-	<p th:text="'password: '+${account.password}"></p>
-	<p th:text="'address: '+${account.address}"></p>
-	<p th:text="'deleted: '+${account.deleted}"></p>
-	<a href="/create.html" th:href="@{/}">戻る</a>
+			<div class="Box">
+				<h1 class="Box_Headtext">Account completed</h1>
+				<div class="lottie-container">
+					<lottie-player src="https://lottie.host/9b42099e-3fa8-429d-9985-a303d751b06f/YvhSZq5ozV.json" background="transparent" speed="2" style="width: 150px; height: 150px;" autoplay></lottie-player>
+				</div>
+				<a class="buttonW" href="/create.html" th:href="@{/}">Login</a>
 			</div>
 		</div>
 	</main>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
 </body>
 
 </html>

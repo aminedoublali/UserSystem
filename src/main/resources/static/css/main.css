@@ -128,3 +128,42 @@ color: #000000;
     line-height: 25px;
     
 }
+.Box{
+    width: 450px;
+    margin:  0 auto;
+    text-align: center;
+    font-family: 'Fell';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: #fff;
+box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.lottie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.buttonW{
+    cursor: pointer;
+display: block;
+    font-family: 'Fell';
+    width: 309px;
+    margin: 0 auto;
+    display: inline-block;
+height: 34px;
+    color: rgb(0, 0, 0);
+background: #ffffff;
+border: 1px solid #000000;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+margin-bottom: 25px;
+line-height: 30px;
+}
+.Box_Headtext{
+    padding-top: 25px;
+}
