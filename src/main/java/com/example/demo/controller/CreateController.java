@@ -29,7 +29,7 @@ public class CreateController {
     }
 
 	@RequestMapping("/create/complete")
-	public String createComplete(Model model,@Validated CreateForm createForm, BindingResult result) {
+	public String createComplete(@Validated CreateForm createForm, BindingResult result,Model model) {
 		if (result.hasErrors()) {
 			model.addAttribute("title", "登録ページ");
 			return "create";

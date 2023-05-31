@@ -1,21 +1,21 @@
 package com.example.demo;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotEmpty;
 
 public class CreateForm {
 
-	@NotNull(message="名前を入力してください")
+	@NotEmpty(message="名前を入力してください")
 	private String name;
 	
 	@Email
-	@NotNull(message="住所を入力してください")
+	@NotEmpty(message="住所を入力してください")
 	private String email;
 	
-	@NotNull(message="パスワードを入力してください")
+	@NotEmpty(message="パスワードを入力してください")
 	private String password;
 	
-	@NotNull(message="住所を入力してください")
+	@NotEmpty(message="住所を入力してください")
 	private String address;
 	
 	public CreateForm() {}
