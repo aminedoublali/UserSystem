@@ -21,7 +21,7 @@
 		</div>
 		<div class="Loginbox">
 			<form class="Form" method="get" action="#" th:action="@{/create/complete}" th:object="${createForm}">
-				<h1 class="Form_Text">Login Your Account</h1>
+				<h1 class="Form_Text">Create Account</h1>
 				<div class="Form_Box">
 					<div class="Arr" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">エラーメッセージ</div>
 					<input class="Form_Box_input" placeholder="Name" type="text" name="name" th:value="*{name}">
