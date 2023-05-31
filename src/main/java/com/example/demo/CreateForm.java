@@ -9,7 +9,7 @@ public class CreateForm {
 	private String name;
 	
 	@Email
-	@NotEmpty(message="住所を入力してください")
+	@NotEmpty(message="メールアドレスを入力してください")
 	private String email;
 	
 	@NotEmpty(message="パスワードを入力してください")
