@@ -167,3 +167,73 @@ line-height: 30px;
 .Box_Headtext{
     padding-top: 25px;
 }
+
+.Header {
+    display: flex;
+    height: 50px;
+    background-color: rgb(255, 236, 236);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header_Logo {
+    font-family: 'Fell';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 20px;
+    line-height: 50px;
+}
+
+.Header_Ul {
+    display: flex;
+    justify-content: flex-end; /* "right" ではなく "flex-end" を使用 */
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+.button2{
+    cursor: pointer;
+display: block;
+    font-family: 'Fell';
+    width: 150px;
+    margin: 0 auto;
+height: 34px;
+    color: rgb(0, 0, 0);
+background: #ffffff;
+border: 1px solid #000000;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+transition: 0.3s ease;
+}
+.button2:hover{
+    cursor: pointer;
+display: block;
+    font-family: 'Fell';
+    width: 150px;
+    margin: 0 auto;
+height: 34px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 193, 193);
+border: 1px solid #ffffff;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+transition: 0.3s ease;
+}
+.Headding_text{
+    margin-top: 250px;
+    font-family: 'Fell';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+}
+.alink{
+    display: block;
+    text-align: center;
+}

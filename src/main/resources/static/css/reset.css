@@ -55,3 +55,33 @@ body {
 body {
   scrollbar-width: none;  /* Firefox */
 }
+button {
+  border: none;      /* ボーダーを無くす */
+  margin: 0;         /* マージンをリセットする */
+  padding: 0;        /* パディングをリセットする */
+  width: auto;       /* 幅を自動にする */
+  overflow: visible; /* オーバーフローを可視にする */
+
+  /* フォントスタイルをリセットする */
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+
+  /* IEでのボタンテキストのカットオフを防ぐ */
+  text-overflow: clip;
+
+  /* フォーカス時のアウトラインを削除する */
+  outline: none;
+
+  /* Firefoxでのボタンの余分なパディングを削除する */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* Webkitでのボタンの余分なパディングを削除する */
+  -webkit-appearance: none;
+
+  /* 標準のボタンカーソルを適用する */
+  cursor: pointer;
+}

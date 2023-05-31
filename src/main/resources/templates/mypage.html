@@ -11,14 +11,14 @@
 	<link rel="stylesheet" th:href="@{/css/valiables.css}">
 </head>
 <body class="BodyPrimary">
-	<h1>MyPage</h1>
-	<p th:text="'id: '+${account.id}"></p>
-	<p th:text="'name: '+${account.name}"></p>
-	<p th:text="'email: '+${account.email}"></p>
-	<p th:text="'password: '+${account.password}"></p>
-	<p th:text="'address: '+${account.address}"></p>
-	<p th:text="'deleted: '+${account.deleted}"></p>
-
-	<a th:href="@{/}">最初に戻る</a>
+	<header class="Header">
+		<h1 class="Header_Logo">SITE</h1>
+		<ul class="Header_Ul">
+			<li class="Header_Li"><button class="button2">My Cart</button></li>
+			<li class="Header_Li"><button class="button2">Settings</button></li>
+		</ul>
+	</header>
+	<h1 class="Headding_text">MyPage</h1>
+	<a class="alink" th:href="@{/login}">ログイン画面に戻る</a>
 </body>
 </html>
